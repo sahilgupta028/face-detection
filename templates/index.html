@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Calculator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <h1>Simple Calculator</h1>
-    <form action="/calculate" method="post">
-        <input type="number" name="num1" placeholder="Enter first number" required>
-        <select name="operation">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">*</option>
-            <option value="divide">/</option>
-        </select>
-        <input type="number" name="num2" placeholder="Enter second number" required>
-        <button type="submit">Calculate</button>
-    </form>
-    {% if result is defined %}
-        <h2>Result: {{ result }}</h2>
-    {% endif %}
-</body>
+<html>
+
+
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5">Live Streaming</h3>
+                <img src="{{ url_for('video_feed') }}" width="50%">
+            </div>
+        </div>
+    </div>
+    </body>
+
+
 </html>
